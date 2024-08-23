@@ -1,0 +1,20 @@
+{
+    "/log_in": {
+        "target": "http://localhost:8081",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug",
+        "pathRewrite": {
+            "^/log_in": ""
+        }
+    },
+    "/erasmus_program": {
+        "target": "http://localhost:8082",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug",
+        "pathRewrite": {
+            "^/erasmus_program": ""
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<app-navigation></app-navigation>
+
+<body>
+    <div class="intensiveShortTermTraining-list-container">
+        <ul class="intensiveShortTermTraining-list">
+            <li *ngFor="let intensiveShortTermTraining of intensiveShortTermTrainings"
+                class="intensiveShortTermTraining-item">
+                {{ intensiveShortTermTraining.description }}
+                <!-- Adjust this according to your PracticeResponse structure -->
+            </li>
+        </ul>
+    </div>
+</body>

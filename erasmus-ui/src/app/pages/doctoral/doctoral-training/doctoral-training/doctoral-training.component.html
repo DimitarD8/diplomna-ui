@@ -1,0 +1,13 @@
+<app-navigation></app-navigation>
+
+<body>
+    <div class="training-list-container">
+        <ul class="training-list">
+            <li *ngFor="let doctoralTraining of doctoralTrainings"
+                class="training-item">
+                {{ doctoralTraining.description }}
+                <!-- Adjust this according to your PracticeResponse structure -->
+            </li>
+        </ul>
+    </div>
+</body>

@@ -1,0 +1,27 @@
+<div class="modal-overlay" (click)="close()"></div>
+<div class="modal-content">
+  <h2>Edit News</h2>
+  <form [formGroup]="editForm" (ngSubmit)="submit()" class="form">
+    <div class="form-group">
+      <label for="title" class="form-label">Title</label>
+      <input id="title" formControlName="title" type="text" class="form-control"
+             placeholder="Enter the news title" required />
+    </div>
+
+    <div class="form-group">
+      <label for="image" class="form-label">Image</label>
+      <input id="image" type="file" class="form-control" (change)="onFileSelected($event)" />
+    </div>
+
+    <div class="form-group">
+      <label for="postedBy" class="form-label">Posted By</label>
+      <input id="postedBy" formControlName="postedBy" type="text" class="form-control"
+             placeholder="Enter the author's name" required />
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn-submit">Save Changes</button>
+      <button type="button" class="btn-clear" (click)="close()">Cancel</button>
+    </div>
+  </form>
+</div>

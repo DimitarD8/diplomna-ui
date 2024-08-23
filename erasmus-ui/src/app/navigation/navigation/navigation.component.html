@@ -1,0 +1,41 @@
+<nav class="navbar">
+    <div class="logo" (click)="homePage()">Erasmus+</div>
+    <ul class="nav-links">
+        <li>
+            <button mat-button [matMenuTriggerFor]="menu1" style="color: aliceblue;"
+                (click)="newsPage()">Новини</button>
+        </li>
+        <li>
+            <button mat-button [matMenuTriggerFor]="menu1" style="color: aliceblue;">Докторантска мобилност</button>
+            <mat-menu #menu1="matMenu">
+                <button mat-menu-item (click)="docktoralInformation()">Информация</button>
+                <button *ngIf="isDoctoralAllowed" mat-menu-item (click)="docktoralTraining()">Обучение</button>
+                <button *ngIf="isDoctoralAllowed" mat-menu-item (click)="docktoralPractice()">Практика</button>
+                <button *ngIf="isDoctoralAllowed" mat-menu-item (click)="docktoralShortTraining()">Краткосрочно
+                    докторантско обучение</button>
+
+            </mat-menu>
+        </li>
+        <li>
+            <button mat-button [matMenuTriggerFor]="menu2" style="color: aliceblue;">Студентска мобилност</button>
+            <mat-menu #menu2="matMenu">
+                <button mat-menu-item (click)="studentTraining()">Обучение</button>
+                <button mat-menu-item (click)="studentPractice()">Практика</button>
+            </mat-menu>
+        </li>
+        <li>
+            <button *ngIf="isTeacherAllowed" mat-button [matMenuTriggerFor]="menu3"
+                style="color: aliceblue;">Преподаватели и административен
+                персонал</button>
+            <mat-menu #menu3="matMenu">
+                <button mat-menu-item (click)="administrativeTraining()">Мобилност с цел обучение</button>
+                <button mat-menu-item (click)="administrativeTeaching()">Мобилност с цел преподаване</button>
+            </mat-menu>
+        </li>
+
+        <li>
+            <button mat-button (click)="openLoginDialog()" style="color: aliceblue;">Вход</button>
+        </li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>

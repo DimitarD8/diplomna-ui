@@ -1,0 +1,56 @@
+<app-navigation></app-navigation>
+<div class="background-news">
+    <div class="container">
+        <form [formGroup]="newsForm" (ngSubmit)="createOrUpdateNews()" class="form">
+            <div class="form-group">
+                <label for="title" class="form-label">Title</label>
+                <input id="title" formControlName="title" type="text" class="form-control"
+                    placeholder="Enter the news title" required />
+                <div *ngIf="newsForm.get('title')?.invalid && newsForm.get('title')?.touched" class="error-message">
+                    Title is required.
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="image" class="form-label">Image</label>
+                <input id="image" type="file" class="form-control" (change)="onFileSelected($event)" required />
+                <div *ngIf="!newsForm.get('image')?.value && newsForm.get('image')?.touched" class="error-message">
+                    Image is required.
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="postedBy" class="form-label">Posted By</label>
+                <input id="postedBy" formControlName="postedBy" type="text" class="form-control"
+                    placeholder="Enter the author's name" required />
+                <div *ngIf="newsForm.get('postedBy')?.invalid && newsForm.get('postedBy')?.touched"
+                    class="error-message">
+                    Author's name is required.
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-submit" [disabled]="newsForm.invalid">
+                    {{ selectedNews ? 'Update' : 'Create' }} News
+                </button>
+                <button type="button" class="btn-clear" (click)="clearForm()">Clear</button>
+            </div>
+        </form>
+
+        <!-- Display all news -->
+        <div *ngFor="let news of newsList" class="card">
+            <img [src]="'data:image/jpeg;base64,' + news.image" alt="{{ news.title }}" />
+            <div class="card-content">
+                <h3>{{ news.title }}</h3>
+                <p>{{ news.datePosted | date }}</p>
+                <span>{{ news.postedBy }}</span>
+                <button (click)="editNews(news)">Edit</button>
+                <button (click)="deleteNews(news.id)">Delete</button>
+            </div>
+        </div>
+
+        <!-- Edit News Modal -->
+        <app-edit-news-modal *ngIf="isEditModalOpen" [selectedNews]="selectedNews" (closeModal)="closeEditModal()"
+            (saveChanges)="saveEdit($event)"></app-edit-news-modal>
+    </div>
+</div>

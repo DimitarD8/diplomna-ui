@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #012f60, #0088ff);
+    color: #0056b3;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+.intensiveShortTermTraining-list-container {
+    background-color: #ffffff;
+    /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for a subtle 3D effect */
+    max-width: 600px;
+    margin: 0 auto;
+    /* Center the list on the page */
+}
+
+.intensiveShortTermTraining-list {
+    list-style-type: none;
+    /* Remove default list bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.intensiveShortTermTraining-item:hover {
+    background-color: #e9ecef;
+    /* Slightly darker gray on hover */
+    cursor: pointer;
+}

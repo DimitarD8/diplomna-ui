@@ -1,0 +1,18 @@
+<app-navigation></app-navigation>
+
+<body>
+    <div class="practice-list-container">
+        <ul class="practice-list">
+            <li *ngFor="let practice of administrativePractices" class="practice-item">
+                {{ practice.description }} <!-- Adjust this according to your PracticeResponse structure -->
+            </li>
+        </ul>
+    </div>
+    <div class="document-list-container">
+        <ul class="document-list">
+            <li *ngFor="let document of documents" class="document-item" (click)="openPdf(document)">
+                {{ document.fileName }} <!-- Display the document name -->
+            </li>
+        </ul>
+    </div>
+</body>
