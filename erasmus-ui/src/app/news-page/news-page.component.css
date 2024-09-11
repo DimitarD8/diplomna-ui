@@ -1,0 +1,170 @@
+.background-news {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #012f60, #0088ff);
+    color: #0056b3;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 95px;
+    width: 100%;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.card-content p {
+    margin: 10px 0 0;
+    color: #555;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #e0e7ff;
+    color: #3b82f6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+}
+
+.grid-item-content {
+    padding: 20px;
+}
+
+.grid-item-content h3 {
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.grid-item-content p {
+    margin: 10px 0 0;
+    color: #555;
+}
+
+.tag-small {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #555;
+    border-radius: 20px;
+    padding: 3px 8px;
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+
+/* General form styling */
+.form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input fields */
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Placeholder color */
+.form-control::placeholder {
+    color: #aaa;
+}
+
+/* Error messages */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Form actions (buttons) */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Buttons */
+.btn-submit {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-clear {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Disabled submit button */
+.btn-submit:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #012f60, #0088ff);
+    color: #0056b3;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+.example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+}
+
+.mobility-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.mobility-card h3 {
+    margin-top: 0;
+}
+
+.mobility-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.example-button-container {
+    justify-content: space-around;
+
+}

@@ -1,0 +1,49 @@
+<h2 mat-dialog-title>Oбновете мобилност</h2>
+
+<form [formGroup]="mobilityForm" (ngSubmit)="submit()">
+
+    <mat-form-field appearance="fill">
+        <mat-label>Описание</mat-label>
+        <textarea matInput formControlName="description" required></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Потребителски тип</mat-label>
+        <mat-select formControlName="userType" required>
+            <mat-option value="DOCTORAL">Докторантска Мобилност</mat-option>
+            <mat-option value="STUDENT">Студентска Мобилност</mat-option>
+            <mat-option value="TEACHER">Преподавателска Мобилност</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Вид на мобилност</mat-label>
+        <mat-select formControlName="type" required>
+            <mat-option value="TRAINING">Обучение</mat-option>
+            <mat-option value="PRACTICE">Практика</mat-option>
+            <mat-option value="INTENSIVESHORTTERMTRAINING">Интензивно краткосрочно обучение</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div formArrayName="documents">
+        <div *ngFor="let document of documents.controls; let i = index" [formGroupName]="i">
+            <mat-form-field appearance="fill">
+                <mat-label>File Name</mat-label>
+                <input matInput formControlName="fileName" required>
+            </mat-form-field>
+
+            <input type="file" (change)="onFileChange($event, i)" required>
+
+            <button mat-icon-button color="warn" (click)="removeDocument(i)" *ngIf="documents.length > 1">
+                <mat-icon>remove_circle</mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <button mat-button type="button" (click)="addDocument()">Add Document</button>
+
+    <div mat-dialog-actions>
+        <button mat-button (click)="close()">Cancel</button>
+        <button mat-button color="primary" type="submit">Submit</button>
+    </div>
+</form>

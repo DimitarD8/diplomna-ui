@@ -1,0 +1,25 @@
+<div style="padding: 20;">
+    <app-navigation></app-navigation>
+</div>
+<div class="chat-container">
+    <div class="chat-header">
+        <h2>Форум за въпроси</h2>
+    </div>
+
+    <div class="chat-window">
+        <div *ngFor="let message of messages" class="message">
+            <div class="message-info">
+                <strong>{{ message.from.userName }}</strong>
+                <span class="message-time">{{ message.timestamp | date:'short' }}</span>
+            </div>
+            <div class="message-content">
+                {{ message.context }}
+            </div>
+        </div>
+    </div>
+
+    <div class="chat-input-area">
+        <textarea [(ngModel)]="newMessage" placeholder="Type your message here..."></textarea>
+        <button (click)="sendMessage()">Send</button>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+.background-inf {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #012f60, #0088ff);
+    color: #0056b3;
+}
+
+.container {
+    margin: 95px;
+    padding: 20px;
+}
+
+.paragraph {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}

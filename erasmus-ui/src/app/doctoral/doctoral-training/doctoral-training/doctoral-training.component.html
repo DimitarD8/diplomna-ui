@@ -1,0 +1,41 @@
+<app-navigation></app-navigation>
+
+<body>
+    <div class="example-button-container" *ngIf="isAdmin">
+        <button mat-fab extended color="primary" (click)="openMobilityDialog()">
+            <mat-icon>add_box</mat-icon>
+        </button>
+    </div>
+    <div *ngIf="mobilities.length > 0; else noMobilities">
+        <div *ngFor="let mobility of mobilities" class="mobility-card">
+            <h3>{{ mobility.description }}</h3>
+            <div>
+                <h4>Необхоодими документи:</h4>
+                <ul>
+                    <li *ngFor="let document of mobility.documents">
+                        {{ document.fileName }}
+                        <button mat-icon-button (click)="onOpenDocument(document.id)">
+                            <mat-icon>open_in_new</mat-icon>
+                        </button>
+
+                    </li>
+                </ul>
+            </div>
+            <div *ngIf="isAdmin">
+                <button mat-raised-button color="primary" (click)="openUpdateDialog(mobility)">
+                    <mat-icon>create</mat-icon>
+                </button>
+            </div>
+            <div *ngIf="isAdmin">
+                <button mat-raised-button color="primary" (click)="onDeleteMobility(mobility.id)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #noMobilities>
+        <p>No mobilities available.</p>
+    </ng-template>
+
+</body>
