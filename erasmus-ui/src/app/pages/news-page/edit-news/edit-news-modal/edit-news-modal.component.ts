@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { NewsRequest, NewsResponse } from '../../../models/news/news';
+import {NewsRequest, NewsResponse} from "../../../../models/news/news";
 
 @Component({
   selector: 'app-edit-news-modal',

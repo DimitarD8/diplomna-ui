@@ -27,16 +27,16 @@ export class DocumentsService {
     });
   }
 
-  getDocumentsByDoctoralMobilityId(doctoralId: number): Observable<DocumentMetadataDto[]> {
-    return this.http.get<DocumentMetadataDto[]>(`${this.apiUrl}/doctoralMobility/${doctoralId}`);
+  getDocumentsByTrainingId(trainingId: number): Observable<DocumentMetadataDto[]> {
+    return this.http.get<DocumentMetadataDto[]>(`${this.apiUrl}/training/${trainingId}`);
   }
 
-  getDocumentsByStudentMobilityId(studentId: number): Observable<DocumentMetadataDto[]> {
-    return this.http.get<DocumentMetadataDto[]>(`${this.apiUrl}/studentMobility/${studentId}`);
+  getDocumentsByPracticeId(practiceId: number): Observable<DocumentMetadataDto[]> {
+    return this.http.get<DocumentMetadataDto[]>(`${this.apiUrl}/practice/${practiceId}`);
   }
 
-  getDocumentsByTeacherMobilityId(teacherMobilityId: number): Observable<DocumentMetadataDto[]> {
-    return this.http.get<DocumentMetadataDto[]>(`${this.apiUrl}/teacherMobility/${teacherMobilityId}`);
+  getDocumentsByIntensiveShortTermTrainingId(IntensiveShortTermTrainingId: number): Observable<DocumentMetadataDto[]> {
+    return this.http.get<DocumentMetadataDto[]>(`${this.apiUrl}/intensiveShortTermTraining/${IntensiveShortTermTrainingId}`);
   }
 
   previewDocument(documentId: number): void {

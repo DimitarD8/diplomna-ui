@@ -6,25 +6,25 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class PermissionService {
 
-  private userRole = new BehaviorSubject<string>('');
+  private role = new BehaviorSubject<string>('');
 
-  _userRole = this.userRole.asObservable();
+  _userRole = this.role.asObservable();
 
   constructor() { }
 
   updateUserRole(newRole: string) {
-    this.userRole.next(newRole);
+    this.role.next(newRole);
   }
 
   isDoctoralAllowed(): boolean {
-    return this.userRole.getValue() === 'DOCTORAL' || this.userRole.getValue() === 'TEACHER' || this.userRole.getValue() === 'ADMIN';
+    return this.role.getValue() === 'DOCTORAL' || this.role.getValue() === 'TEACHER' || this.role.getValue() === 'ADMIN';
   }
 
   isTeacherAllowed(): boolean {
-    return this.userRole.getValue() === 'TEACHER' || this.userRole.getValue() === 'ADMIN';
+    return this.role.getValue() === 'TEACHER' || this.role.getValue() === 'ADMIN';
   }
 
   isAdminAllowed(): boolean {
-    return this.userRole.getValue() === 'ADMIN';
+    return this.role.getValue() === 'ADMIN';
   }
 }

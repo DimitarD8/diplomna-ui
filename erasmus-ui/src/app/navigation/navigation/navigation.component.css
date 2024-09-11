@@ -16,9 +16,14 @@ ul {
     padding: 10px 20px;
     position: fixed;
     width: 100%;
+    max-width: 100%;
     backdrop-filter: blur(80px);
     top: 0;
     left: 0;
+}
+
+.userName {
+    margin-right: 4rem;
 }
 
 .logo {

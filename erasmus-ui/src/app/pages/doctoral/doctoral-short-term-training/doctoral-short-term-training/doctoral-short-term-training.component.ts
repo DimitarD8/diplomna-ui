@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationComponent } from '../../../navigation/navigation/navigation.component';
-import { IntensiveShortTermTrainingResponse } from '../../../models/intensiveShortTermTraining/intensiveShortTermTraining';
-import { DoctoralService } from '../../../service/doctoral/doctoral.service';
-import { DoctoralMobilityResponse } from '../../../models/doctoral/doctoral';
 import { CommonModule } from '@angular/common';
+import {NavigationComponent} from "../../../../navigation/navigation/navigation.component";
+import {
+  IntensiveShortTermTrainingResponse
+} from "../../../../models/intensiveShortTermTraining/intensiveShortTermTraining";
+import {DoctoralService} from "../../../../service/doctoral/doctoral.service";
+import {DoctoralMobilityResponse} from "../../../../models/doctoral/doctoral";
 
 @Component({
   selector: 'app-doctoral-short-term-training',

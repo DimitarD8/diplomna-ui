@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { NavigationComponent } from '../../../navigation/navigation/navigation.component';
-import { TrainingResponse } from '../../../models/training/training';
-import { StudentService } from '../../../service/student/student.service';
-import { StudentMobilityResponse } from '../../../models/student/student';
 import { CommonModule } from '@angular/common';
+import {NavigationComponent} from "../../../../navigation/navigation/navigation.component";
+import {TrainingResponse} from "../../../../models/training/training";
+import {StudentService} from "../../../../service/student/student.service";
+import {StudentMobilityResponse} from "../../../../models/student/student";
 
 @Component({
   selector: 'app-student-training',

@@ -10,6 +10,7 @@ import { NewsPageComponent } from './news-page/news-page.component';
 import { TeachingMobilityComponent } from './administrative-personal/teaching/teaching-mobility/teaching-mobility.component';
 import { TrainingMobilityComponent } from './administrative-personal/training/training-mobility/training-mobility.component';
 import { LoginComponent } from './log-in/login/login.component';
+import { ChatComponent } from './chat/chat/chat.component';
 
 export const routes: Routes = [
     { path: '', component: HomePageComponent },
@@ -21,5 +22,6 @@ export const routes: Routes = [
     { path: 'student-practice', component: StudentPracticeComponent },
     { path: 'student-training', component: StudentTrainingComponent },
     { path: 'administrative-teaching', component: TeachingMobilityComponent },
-    { path: 'administrative-training', component: TrainingMobilityComponent }
+    { path: 'administrative-training', component: TrainingMobilityComponent },
+    { path: 'chat', component: ChatComponent }
 ];

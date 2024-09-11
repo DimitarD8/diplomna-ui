@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationComponent } from '../../../navigation/navigation/navigation.component';
-import { TrainingResponse } from '../../../models/training/training';
-import { DoctoralService } from '../../../service/doctoral/doctoral.service';
-import { DoctoralMobilityResponse } from '../../../models/doctoral/doctoral';
-import { A, R } from '@angular/cdk/keycodes';
-import { CommonModule } from '@angular/common';
+import {NavigationComponent} from "../../../../navigation/navigation/navigation.component";
+import {CommonModule} from "@angular/common";
+import {TrainingResponse} from "../../../../models/training/training";
+import {DoctoralService} from "../../../../service/doctoral/doctoral.service";
+import {DoctoralMobilityResponse} from "../../../../models/doctoral/doctoral";
+
 
 @Component({
   selector: 'app-doctoral-training',

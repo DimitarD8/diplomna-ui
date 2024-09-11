@@ -7,7 +7,7 @@ export interface NewsRequest {
   export interface NewsResponse {
     id: number;
     title: string;
-    image: string; // This should be a Base64 encoded string
+    image: string;
     postedBy: string;
     datePosted: string;
   }

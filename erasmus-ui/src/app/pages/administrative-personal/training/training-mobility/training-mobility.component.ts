@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationComponent } from '../../../navigation/navigation/navigation.component';
-import { CommonModule } from '@angular/common';
-import { TrainingResponse } from '../../../models/training/training';
-import { AdministrativeService } from '../../../service/administrative/administrative.service';
-import { AdiministrativeMobilityResponse } from '../../../models/administrative/administrative';
+import {NavigationComponent} from "../../../../navigation/navigation/navigation.component";
+import {CommonModule} from "@angular/common";
+import {TrainingResponse} from "../../../../models/training/training";
+import {AdministrativeService} from "../../../../service/administrative/administrative.service";
+import {AdiministrativeMobilityResponse} from "../../../../models/administrative/administrative";
+
 
 @Component({
   selector: 'app-training-mobility',

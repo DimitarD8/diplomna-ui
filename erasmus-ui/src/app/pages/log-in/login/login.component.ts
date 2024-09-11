@@ -1,13 +1,13 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { LogInService } from '../../service/log-in/log-in-service.service';
-import { MatDialogRef } from '@angular/material/dialog';
-import { LoginRequest, LoginResponse } from '../../models/log-in/auth';
+
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { DoctoralService } from '../../service/doctoral/doctoral.service';
-import { DoctoralMobilityResponse } from '../../models/doctoral/doctoral';
-import { PermissionService } from '../../service/permission/permission.service';
-import { DocumentsService } from '../../service/document/documents.service';
+import {LogInService} from "../../../service/log-in/log-in-service.service";
+import {MatDialogRef} from "@angular/material/dialog";
+import {PermissionService} from "../../../service/permission/permission.service";
+import {DocumentsService} from "../../../service/document/documents.service";
+import {LoginRequest, LoginResponse} from "../../../models/log-in/auth";
+
 
 @Component({
   selector: 'app-login',

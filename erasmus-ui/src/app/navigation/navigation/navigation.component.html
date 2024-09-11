@@ -1,9 +1,11 @@
 <nav class="navbar">
-    <div class="logo" (click)="homePage()">Erasmus+</div>
+    <div class="logo">Erasmus+</div>
     <ul class="nav-links">
         <li>
-            <button mat-button [matMenuTriggerFor]="menu1" style="color: aliceblue;"
-                (click)="newsPage()">Новини</button>
+            <button mat-button style="color: aliceblue;" (click)="homePage()">Начало</button>
+        </li>
+        <li>
+            <button mat-button style="color: aliceblue;" (click)="newsPage()">Новини</button>
         </li>
         <li>
             <button mat-button [matMenuTriggerFor]="menu1" style="color: aliceblue;">Докторантска мобилност</button>
@@ -32,10 +34,10 @@
                 <button mat-menu-item (click)="administrativeTeaching()">Мобилност с цел преподаване</button>
             </mat-menu>
         </li>
-
         <li>
-            <button mat-button (click)="openLoginDialog()" style="color: aliceblue;">Вход</button>
+            <button mat-button style="color: aliceblue;" (click)="chat()">Форум</button>
         </li>
     </ul>
+    <div class= "userName">{{userName}}</div>
 </nav>
 <router-outlet></router-outlet>

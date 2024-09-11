@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationComponent } from '../../../navigation/navigation/navigation.component';
 import { CommonModule } from '@angular/common';
-import { PracticeResponse } from '../../../models/practice/practice';
-import { AdministrativeService } from '../../../service/administrative/administrative.service';
-import { AdiministrativeMobilityResponse } from '../../../models/administrative/administrative';
-import { DocumentsService } from '../../../service/document/documents.service';
-import { DocumentMetadataDto } from '../../../models/document/document';
+import {NavigationComponent} from "../../../../navigation/navigation/navigation.component";
+import {PracticeResponse} from "../../../../models/practice/practice";
+import {DocumentMetadataDto} from "../../../../models/document/document";
+import {AdministrativeService} from "../../../../service/administrative/administrative.service";
+import {DocumentsService} from "../../../../service/document/documents.service";
+import {AdiministrativeMobilityResponse} from "../../../../models/administrative/administrative";
+
 
 @Component({
   selector: 'app-teaching-mobility',

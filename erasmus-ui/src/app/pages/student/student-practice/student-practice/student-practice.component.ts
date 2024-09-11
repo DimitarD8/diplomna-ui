@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationComponent } from '../../../navigation/navigation/navigation.component';
-import { PracticeResponse } from '../../../models/practice/practice';
-import { StudentService } from '../../../service/student/student.service';
-import { StudentMobilityResponse } from '../../../models/student/student';
+
 import { CommonModule } from '@angular/common';
+import {NavigationComponent} from "../../../../navigation/navigation/navigation.component";
+import {PracticeResponse} from "../../../../models/practice/practice";
+import {StudentService} from "../../../../service/student/student.service";
+import {StudentMobilityResponse} from "../../../../models/student/student";
 
 @Component({
   selector: 'app-student-practice',

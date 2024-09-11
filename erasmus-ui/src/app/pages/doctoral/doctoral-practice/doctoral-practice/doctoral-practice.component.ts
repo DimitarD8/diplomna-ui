@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationComponent } from '../../../navigation/navigation/navigation.component';
-import { PracticeResponse } from '../../../models/practice/practice';
-import { DoctoralService } from '../../../service/doctoral/doctoral.service';
-import { DoctoralMobilityResponse } from '../../../models/doctoral/doctoral';
-import { CommonModule } from '@angular/common';
-import { DocumentsService } from '../../../service/document/documents.service';
-import { DocumentMetadataDto } from '../../../models/document/document';
+import { NavigationComponent } from "../../../../navigation/navigation/navigation.component";
+import { CommonModule } from "@angular/common";
+import { PracticeResponse } from "../../../../models/practice/practice";
+import { DocumentsService } from "../../../../service/document/documents.service";
+import { DoctoralService } from "../../../../service/doctoral/doctoral.service";
+import { DocumentMetadataDto } from "../../../../models/document/document";
+import { DoctoralMobilityResponse } from "../../../../models/doctoral/doctoral";
+
 
 @Component({
   selector: 'app-doctoral-practice',

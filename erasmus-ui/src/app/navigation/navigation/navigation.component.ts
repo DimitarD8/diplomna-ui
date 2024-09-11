@@ -20,9 +20,9 @@ import { LoginComponent } from '../../log-in/login/login.component';
 export class NavigationComponent implements OnInit {
   navLinksActive = false;
   isLoggedIn: boolean = false;
-  isDoctoralAllowed: boolean = true;
-  isTeacherAllowed: boolean = true;
-  isAdminAllowed: boolean = true;
+  isDoctoralAllowed: boolean = false;
+  isTeacherAllowed: boolean = false;
+  userName: string = '';
 
   constructor(private router: Router
     , private permissionService: PermissionService
@@ -31,9 +31,12 @@ export class NavigationComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.userName = localStorage.getItem('userName')!;
     this.logInService._isLoggedIn.subscribe((result: boolean) => {
       this.isLoggedIn = result;
-    })
+    });
+    this.isDoctoralAllowed = this.permissionService.isDoctoralAllowed();
+    this.isTeacherAllowed = this.permissionService.isTeacherAllowed();
   }
 
   toggleNav() {
@@ -80,16 +83,7 @@ export class NavigationComponent implements OnInit {
     this.router.navigate(['/administrative-training'])
   }
 
-  openLoginDialog(): void {
-    const dialogRef = this.dialog.open(LoginComponent, {
-      width: '500px',
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
+  chat(){
+    this.router.navigate(['/chat'])
   }
-
-
-
 }

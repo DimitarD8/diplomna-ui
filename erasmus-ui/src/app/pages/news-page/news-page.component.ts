@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationComponent } from '../navigation/navigation/navigation.component';
-import { NewsService } from '../service/news/news.service';
-import { NewsRequest, NewsResponse } from '../models/news/news';
+
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { EditNewsModalComponent } from './edit-news/edit-news-modal/edit-news-modal.component';
+import {NavigationComponent} from "../../navigation/navigation/navigation.component";
+import {NewsRequest, NewsResponse} from "../../models/news/news";
+import {NewsService} from "../../service/news/news.service";
 
 @Component({
   selector: 'app-news-page',

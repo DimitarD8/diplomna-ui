@@ -16,6 +16,22 @@ export class LogInService {
 
   constructor(private httpClient: HttpClient) { }
 
+  saveUserName(userName: string): void {
+    localStorage.setItem('userName', userName);
+  }
+
+  getUserName(): string | null {
+    return localStorage.getItem('userName');
+  }
+
+  saveUserId(id: number): void {
+    localStorage.setItem('userId', JSON.stringify(id));
+  }
+
+  getUserId(): string | null {
+    return localStorage.getItem('userId');
+  }
+
   saveToken(token: string): void {
     localStorage.setItem('jwtToken', token);
   }
@@ -30,7 +46,11 @@ export class LogInService {
 
   logout(): void {
     localStorage.removeItem('jwtToken');
+    localStorage.removeItem('userName');
+    localStorage.removeItem('userId');
   }
+
+
 
   logIn(user: LoginRequest): Observable<LoginResponse> {
     return this.httpClient.post<LoginResponse>(this.apiUrl, user);

@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { NavigationComponent } from '../../navigation/navigation/navigation.component';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { LoginComponent } from '../../log-in/login/login.component';
+import {NavigationComponent} from "../../../navigation/navigation/navigation.component";
 
 
 @Component({
